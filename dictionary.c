@@ -201,18 +201,20 @@ void deleteword()
         break;
     }while(1);
     int found = 0;
-    while (fscanf(fp, "%[^,],%[^,]\n", dictionary[i].word, dictionary[i].meaning) == 2||i<countwords)
-    {
+   for (i = 0; i < countwords; i++)
+   {
+        if (fscanf(fp, "%[^,],%[^,\n]\n", dictionary[i].word, dictionary[i].meaning) != 2)
+        {
+            break; // Stop reading if format mismatch
+        }
         if (strcasecmp(dictionary[i].word, word) == 0)
         {
-            printf("The word %s is deleted from dictionary\n",word);
-            found=1;
-        }
-        else
+            printf("The word '%s' is deleted from the dictionary.\n", word);
+            found = 1;
+        } else
         {
             fprintf(fp1, "%s,%s\n", dictionary[i].word, dictionary[i].meaning);
         }
-        i++;
     }
     fclose(fp);
     fclose(fp1);
@@ -220,6 +222,7 @@ void deleteword()
     {
      remove("dictionary.csv");
      rename("temp.csv", "dictionary.csv");
+     countwords--;
     }
     else
     {
