@@ -25,7 +25,12 @@ int main() {
         printf("3. Delete Word\n");
         printf("4. Exit\n");
         printf("Enter your choice: ");
-        scanf("%d", &ch);
+        //To verify user is giving option in intergers
+        while((scanf("%d",&ch)!=1))
+        {
+            while(getchar()!='\n');
+            printf("Error in option ,Please type respective option.\n");
+        }
 
         switch (ch) {
             case 1:
