@@ -143,7 +143,7 @@ sequenceDiagram
 ```
 dictionary/
 ├── dictionary.c        # Main C program
-├── dictionary.csv      # Dictionary data (created at runtime, not tracked)
+├── dictionary.csv      # Dictionary data (created at runtime)
 ├── README.md           # Project documentation
 ├── LICENSE             # MIT License
 └── .gitignore          # Git ignore file
@@ -214,6 +214,15 @@ Rakshak D
 
 ---
 
+## 👥 Contributors
+
+- **Rakshak D**  
+  🔗 [GitHub Profile](https://github.com/Rakshak-D)
+- **Pranathi R**  
+  🔗 [GitHub Profile](https://github.com/Pranathi38)
+
+---
+
 ## 🛠️ Development Roadmap
 
 ### Next Milestones
@@ -236,4 +245,5 @@ Rakshak D
 - Test with sample `dictionary.csv` files.
 
 ---
+
 
